@@ -1,0 +1,13 @@
+#!/bin/sh  
+# This's a wrapper of udevadm
+
+if [ $# -lt 1 ]; then
+    echo "Usage : udevadm -h"
+    exit 1
+fi
+    
+echo "[Use wrapper of udevadm]"
+/sbin/udevadm.ori $@ 
+echo "[Exit wrapper]"
+
+exit 0
